@@ -21,6 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_25_111616) do
     t.float "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_items_on_name"
+    t.index ["price"], name: "index_items_on_price"
   end
 
 end
