@@ -1,0 +1,16 @@
+<h2 style="color: #B00100; margin: 0 auto"> create new item </h2><br/>
+
+<!--<form action="/times" method="post">-->
+<!--  <label>-->
+<!--    <input type="text" name="title" />-->
+<!--  </label>-->
+<!--  <input type="submit" />-->
+<!--</form>-->
+
+<%= form_tag items_path, method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :price %>
+  <%= text_field_tag :price %>
+  <%= submit_tag "Save", class: "bin btm-large btm primary"  %>
+<% end %>
